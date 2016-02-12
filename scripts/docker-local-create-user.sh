@@ -7,7 +7,7 @@ pip install -r $SCRIPT_DIR/../docker/requirements.txt
 cd $SCRIPT_DIR/../docker
 
 
-docker-compose -p lbdemo -f ./docker-compose-prebuilt.yml run superdesk ./scripts/fig_wrapper.sh bash -c "\
+docker-compose -p lbdemo -f ./docker-compose-fakes3.yml run superdesk ./scripts/fig_wrapper.sh bash -c "\
   python3 manage.py app:initialize_data ;\
   echo '+++ sample data was prepopulated' ;\
   python3 manage.py users:create -u admin -p admin -e 'admin@example.com' --admin=true ;\

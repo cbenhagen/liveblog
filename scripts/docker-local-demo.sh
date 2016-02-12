@@ -3,7 +3,7 @@
 set -ue
 
 function dcs() {
-	docker-compose -p lbdemo -f ./docker-compose-prebuilt.yml $@
+	docker-compose -p lbdemo -f ./docker-compose-fakes3.yml $@
 }
 
 
